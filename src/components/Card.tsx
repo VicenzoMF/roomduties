@@ -34,7 +34,7 @@ export function Card({ type = "add", categories, content, date, title }: CardPro
         <>
           <div className="h-[28%] bg-[#367C93] rounded-t-3xl flex items-center justify-center">
             { editing ? (
-              <textarea className="h-6 bg-transparent resize-none outline-none text-center font-extrabold"/>
+              <textarea className="h-6 text-lg bg-transparent resize-none outline-none text-center font-extrabold">{title}</textarea>
             ) : (
               <h3 className="font-extrabold text-lg">{title}</h3>
               )
@@ -43,7 +43,7 @@ export function Card({ type = "add", categories, content, date, title }: CardPro
           <div className="flex flex-col mx-auto items-center  -translate-y-4">
             <div className="w-[35px] bg-white rounded-full">
             <Plus width={35} height={35}/>
-            </div>
+          </div>
             { editing ? (
                 <input type="date" className="text-black/[.25] text-sm text-center"/>
             ) : (
